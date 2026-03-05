@@ -3,15 +3,15 @@ import os
 import shutil
 
 # CONFIGURATION
-NIH_CSV_PATH = 'dataset/nih_chest_x-ray/sample_labels.csv'  # The CSV from the 5GB Kaggle sample
-SOURCE_IMG_DIR = 'dataset/nih_chest_x-ray/images/'          # Where the 5,600 images are
+NIH_CSV_PATH = 'dataset/nih_chest_x-ray/sample_labels.csv'  # Original metadata
+SOURCE_IMG_DIR = 'dataset/nih_chest_x-ray/images/'          # Original 5,600 images
 OUTPUT_DIR = 'dataset/nih_chest_x-ray/NIH_Xray_300'
 TARGET_SIZE = 300
 
 def downsample_xray():
     df = pd.read_csv(NIH_CSV_PATH)
     
-    # Prioritize Cardiomegaly (Heart) and Infiltration (Lungs) for your screening app
+    # Prioritize Cardiomegaly (Heart) and Infiltration (Lungs). See README for details
     priority_labels = ['Cardiomegaly', 'Infiltration', 'Effusion', 'No Finding']
     
     selected_indices = []
