@@ -30,6 +30,10 @@
 ## Visão geral
 Este repositório documenta a etapa de curadoria e investigação de dados para um projeto de Inteligência Artificial aplicado à Cardiologia. O foco desta fase é buscar, identificar e coletar conjuntos de dados cardiológicos, compreender a sua procedência, avaliar a sua integridade, relevância clínica e como diferentes modalidades (numérica, textual e visual) podem ser exploradas por algoritmos de IA.
 
+
+![asd asd asd a](assets/fig1.png)
+
+
 ## 1. Dados numéricos<br><sub>O contexto metabólico e funcional<sub>
 Para esta categoria, foram selecionados datasets que representam os sinais vitais e os biomarcadores fundamentais para a saúde cardiovascular.
 
@@ -51,6 +55,7 @@ Nesta seção, exploramos a procedência e o impacto dos dados que fundamentam a
 | Link local | [dataset/cardiovascular_disease](dataset/cardiovascular_disease) |
 | Link Google Drive | [drive.google.com/drive/folders/11T3nwl_bOY6uIM-yBvVKdBCK5ulLAjGE?usp=sharing](https://drive.google.com/drive/folders/11T3nwl_bOY6uIM-yBvVKdBCK5ulLAjGE?usp=sharing) |
 
+
 #### Heart Failure Prediction Dataset
 > - **Histórico e Contexto**<br>Trata-se de um dataset "sintético" resultante da combinação de 5 bases de dados hospitalares independentes (Cleveland, Hungria, Suíça, Long Beach e Stalog). É o dataset mais abrangente disponível publicamente para prever falhas cardíacas com base em sintomas clínicos.
 >
@@ -59,6 +64,13 @@ Nesta seção, exploramos a procedência e o impacto dos dados que fundamentam a
 > - **Estatísticas (Kaggle)**<br>Usabilidade 10.0, cerca de 6.000 upvotes. É reconhecido por não possuir valores nulos, facilitando o treinamento de modelos robustos.
 >
 > - **Licença**<br>Open Data Commons Attribution License (ODC-By) v1.0.
+
+| Artefatos | |
+| --- | --- |
+| Link dataset original | [https://www.kaggle.com/datasets/fedesoriano/heart-failure-prediction/data](https://www.kaggle.com/datasets/fedesoriano/heart-failure-prediction/data) |
+| Link local |  [dataset/heart_failure](dataset/heart_failure)
+| Link Google Drive | [drive.google.com/drive/folders/1alQ0DYefEby8D6VibpsmCXtH70PNYnh_?usp=sharing](https://drive.google.com/drive/folders/1alQ0DYefEby8D6VibpsmCXtH70PNYnh_?usp=sharing) |
+
 
 #### Variáveis relevantes e justificativa clínica
 > - **Pressão Arterial Sistólica/Diastólica**<br>Essencial para identificar a hipertensão, o principal preditor de danos vasculares e eventos agudos.<br>
@@ -71,12 +83,6 @@ Nesta seção, exploramos a procedência e o impacto dos dados que fundamentam a
 > 
 
 **Relevância para IA** - Para um projeto de saúde, essas variáveis funcionam como "features" de alta correlação, permitindo que modelos de aprendizado de máquina aprendam a distinguir entre padrões de normalidade e estados patológicos com base em evidências fisiológicas concretas.
-
-| Artefatos | |
-| --- | --- |
-| Link dataset original | [https://www.kaggle.com/datasets/fedesoriano/heart-failure-prediction/data](https://www.kaggle.com/datasets/fedesoriano/heart-failure-prediction/data) |
-| Link local |  [dataset/heart_failure](dataset/heart_failure)
-| Link Google Drive | [drive.google.com/drive/folders/1alQ0DYefEby8D6VibpsmCXtH70PNYnh_?usp=sharing](https://drive.google.com/drive/folders/1alQ0DYefEby8D6VibpsmCXtH70PNYnh_?usp=sharing) |
 
 
 ## 2. Dados Textuais<br><sub>Processamento de Linguagem Natural (NLP)<sub>
@@ -91,12 +97,32 @@ A análise de dados não estruturados permite que a IA compreenda a literatura m
 >
 > - **Dados Estatísticos**<br>Publicada nos Arquivos Brasileiros de Cardiologia (fator de impacto relevante na América Latina), esta diretriz possui milhares de citações e é o documento mais consultado por cardiologistas brasileiros para a tomada de decisão clínica.
 
+| Artefatos | |
+| --- | --- |
+| Título original | **Diretriz Brasileira de Insuficiência Cardíaca Crônica e Aguda** |
+| Link original | [www.scielo.br/j/abc/a/XkVKFb4838qXrXSYbmCYM3K/?lang=pt](https://www.scielo.br/j/abc/a/XkVKFb4838qXrXSYbmCYM3K/?lang=pt) |
+| Link PDF externo | [www.scielo.br/j/abc/a/XkVKFb4838qXrXSYbmCYM3K/?format=pdf&lang=pt](https://www.scielo.br/j/abc/a/XkVKFb4838qXrXSYbmCYM3K/?format=pdf&lang=pt) |
+| Link PDF local | [documents/diretriz_brasileira_de_insuficiencia_cardiaca_cronica_e_aguda.pdf](documents/diretriz_brasileira_de_insuficiencia_cardiaca_cronica_e_aguda.pdf) |
+| Link PDF Google Drive | [drive.google.com/file/d/1BLCramS381LNTNc4icAeZLggScii_C5_/view?usp=sharing](https://drive.google.com/file/d/1BLCramS381LNTNc4icAeZLggScii_C5_/view?usp=sharing) |
+
+
+
+
 #### Atualização de Tópicos Emergentes da Diretriz de Insuficiência Cardíaca (SBC)
 > - **Por que este texto?**<br>Selecionamos este documento pois ele complementa a diretriz principal com as evidências mais recentes (2021) sobre o manejo da doença no Brasil. Ele foca em novas terapias e perfis epidemiológicos recentes.
 >
 > - **Relevância**<br>É o documento que orienta a conduta médica atualizada nas unidades de saúde brasileiras. Ele contém a terminologia técnica mais moderna usada em prontuários e relatórios médicos.
 >
 > - **Dados Estatísticos**<br>Publicado pela Sociedade Brasileira de Cardiologia, este documento é a referência normativa para mais de 14.000 cardiologistas no país, sendo o pilar central para a atualização de protocolos de saúde.
+
+| Artefatos |  |
+| --- | --- |
+| Título original | **Atualização de Tópicos Emergentes da Diretriz de Insuficiência Cardíaca** |
+| Link original | [abccardiol.org/article/atualizacao-de-topicos-emergentes-da-diretriz-brasileira-de-insuficiencia-cardiaca-2021/](https://abccardiol.org/article/atualizacao-de-topicos-emergentes-da-diretriz-brasileira-de-insuficiencia-cardiaca-2021/) |
+| Link PDF externo | [abccardiol.org/wp-content/uploads/articles_xml/0066-782X-abc-116-06-1174/0066-782X-abc-116-06-1174.x74770.pdf](https://abccardiol.org/wp-content/uploads/articles_xml/0066-782X-abc-116-06-1174/0066-782X-abc-116-06-1174.x74770.pdf) |
+| Link PDF local | [documents/atualizacao_de_topicos_emergentes-da_diretriz_brasileira_de_insuficiencia_cardiaca_2021.pdf](documents/atualizacao_de_topicos_emergentes-da_diretriz_brasileira_de_insuficiencia_cardiaca_2021.pdf) |
+| Link PDF Google Drive | [drive.google.com/file/d/11TFQa9vaMpnUQkma29x2r5nBoLf5OWe-/view?usp=sharing](https://drive.google.com/file/d/11TFQa9vaMpnUQkma29x2r5nBoLf5OWe-/view?usp=sharing) |
+
 
 #### Exploração dos textos via algoritmos de NLP
 A aplicação de técnicas de Processamento de Linguagem Natural sobre estas fontes permite a conversão de conhecimento científico passivo em modelos de dados acionáveis. Através do uso de modelos de linguagem (LLMs) e bibliotecas especializadas, é possível extrair a semântica clínica e as regras de negócio da medicina cardiológica, garantindo que o sistema de IA opere de acordo com os protocolos vigentes e a realidade epidemiológica brasileira.
@@ -127,6 +153,12 @@ Estados Unidos (NIH Clinical Center), publicado originalmente em 2017.
 > - **Licença**<br>
 Domínio Público (CC0: Public Domain), permitindo uso irrestrito para pesquisa.
 
+| Artefatos | |
+| --- | --- |
+| Link dataset original | [www.kaggle.com/datasets/nih-chest-xrays/data](https://www.kaggle.com/datasets/nih-chest-xrays/data) |
+| Link local | [dataset/nih_chest_x-ray/NIH_Xray_300](dataset/nih_chest_x-ray/NIH_Xray_300) |
+| Link Google Drive | [drive.google.com/drive/folders/1mY7Sdj7hZmnB7NJGLHKUG66va-Yap-E1?usp=sharing](https://drive.google.com/drive/folders/1mY7Sdj7hZmnB7NJGLHKUG66va-Yap-E1?usp=sharing) |
+
 #### Exploração via Visão Computacional
 > - **Detecção de Padrões e Anomalias**<br>Algoritmos podem ser treinados para identificar "infiltrados" ou "edemas" nos pulmões, sinais indiretos de falha cardíaca.
 >
@@ -135,12 +167,6 @@ Domínio Público (CC0: Public Domain), permitindo uso irrestrito para pesquisa.
 > - **Reconhecimento de Dispositivos Implantados**<br>Identificação automática de marca-passos ou stents, fornecendo contexto vital sobre o histórico cirúrgico do paciente.
 >
 > - **Importância para IA**<br>A visão computacional atua como um multiplicador de eficiência, permitindo a triagem ultrarrápida de exames em unidades de emergência e reduzindo a variabilidade interpretativa entre diferentes examinadores.
-
-| Artefatos | |
-| --- | --- |
-| Link dataset original | [www.kaggle.com/datasets/nih-chest-xrays/data](https://www.kaggle.com/datasets/nih-chest-xrays/data) |
-| Link local | [dataset/nih_chest_x-ray/NIH_Xray_300](dataset/nih_chest_x-ray/NIH_Xray_300) |
-| Link Google Drive | [drive.google.com/drive/folders/1mY7Sdj7hZmnB7NJGLHKUG66va-Yap-E1?usp=sharing](https://drive.google.com/drive/folders/1mY7Sdj7hZmnB7NJGLHKUG66va-Yap-E1?usp=sharing) |
 
 
 ## 4. Estratégia de Curadoria
