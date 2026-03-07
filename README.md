@@ -31,16 +31,16 @@
 Este repositório documenta a etapa de curadoria e investigação de dados para um projeto de Inteligência Artificial aplicado à Cardiologia. O foco desta fase é buscar, identificar e coletar conjuntos de dados cardiológicos, compreender a sua procedência, avaliar a sua integridade, relevância clínica e como diferentes modalidades (numérica, textual e visual) podem ser exploradas por algoritmos de IA.
 
 > ![Diagrama de tríade de conhecimento cardíaco](assets/fig1.png)
-> *<sup>Figura 1: Diagrama de tríade de conhecimento cardíaco - Esta sobreposição de Venn ilustra como os dados numéricos, textuais e visuais se complementam para criar um entendimento holístico da saúde do paciente, justificando o uso de múltiplas modalidades na fase de busca de dados.</sup>*
+> *<sup>Figura 1 - Diagrama de tríade de conhecimento cardíaco - Esta sobreposição de Venn ilustra como os dados numéricos, textuais e visuais se complementam para criar um entendimento holístico da saúde do paciente, justificando o uso de múltiplas modalidades na fase de busca de dados.</sup>*
 
 ## 1. Dados numéricos<br><sub>O contexto metabólico e funcional<sub>
 Para esta categoria, foram selecionados datasets que representam os sinais vitais e os biomarcadores fundamentais para a saúde cardiovascular.
 
-### Origem e Objetivos dos Datasets
+### Origem e objetivos dos datasets
 Nesta seção, exploramos a procedência e o impacto dos dados que fundamentam as análises quantitativas.
 
-#### Cardiovascular Disease Dataset
-> - **Histórico e Contexto**<br>Este dataset é um clássico da área de saúde, frequentemente utilizado para benchmarking de algoritmos de classificação. Ele foca em exames de rotina para identificar a presença de doenças cardiovasculares em uma fase assintomática.
+#### Cardiovascular disease dataset
+> - **Histórico e dontexto**<br>Este dataset é um clássico da área de saúde, frequentemente utilizado para benchmarking de algoritmos de classificação. Ele foca em exames de rotina para identificar a presença de doenças cardiovasculares em uma fase assintomática.
 >
 > - **Origem**<br>Dados coletados na Rússia (Mendeley Data / Svetlana Ulianova), com registros consolidados por volta de 2019.
 >
@@ -55,8 +55,8 @@ Nesta seção, exploramos a procedência e o impacto dos dados que fundamentam a
 | Link Google Drive | [drive.google.com/drive/folders/11T3nwl_bOY6uIM-yBvVKdBCK5ulLAjGE?usp=sharing](https://drive.google.com/drive/folders/11T3nwl_bOY6uIM-yBvVKdBCK5ulLAjGE?usp=sharing) |
 
 
-#### Heart Failure Prediction Dataset
-> - **Histórico e Contexto**<br>Trata-se de um dataset "sintético" resultante da combinação de 5 bases de dados hospitalares independentes (Cleveland, Hungria, Suíça, Long Beach e Stalog). É o dataset mais abrangente disponível publicamente para prever falhas cardíacas com base em sintomas clínicos.
+#### Heart dailure prediction dataset
+> - **Histórico e contexto**<br>Trata-se de um dataset "sintético" resultante da combinação de 5 bases de dados hospitalares independentes (Cleveland, Hungria, Suíça, Long Beach e Stalog). É o dataset mais abrangente disponível publicamente para prever falhas cardíacas com base em sintomas clínicos.
 >
 > - **Origem**<br>Consolidado em 2021 (Multinacional: EUA, Hungria e Suíça).
 >
@@ -72,52 +72,52 @@ Nesta seção, exploramos a procedência e o impacto dos dados que fundamentam a
 
 
 #### Variáveis relevantes e justificativa clínica
-> - **Pressão Arterial Sistólica/Diastólica**<br>Essencial para identificar a hipertensão, o principal preditor de danos vasculares e eventos agudos.<br>
+> - **Pressão arterial sistólica/diastólica**<br>Essencial para identificar a hipertensão, o principal preditor de danos vasculares e eventos agudos.<br>
 >
 > - **Colesterol**<br>Variável crítica para avaliar o risco de aterosclerose e obstrução arterial a longo prazo.
 >
-> - **Frequência Cardíaca Máxima (MaxHR)**<br>Indica a eficiência do bombeamento cardíaco sob estresse, sendo um marcador vital para a reserva funcional do coração.
+> - **Frequência cardíaca máxima (MaxHR)**<br>Indica a eficiência do bombeamento cardíaco sob estresse, sendo um marcador vital para a reserva funcional do coração.
 >
-> - **Depressão de ST (Oldpeak)**<br>Variável derivada do eletrocardiograma (ECG) que indica isquemia miocárdica (falta de oxigenação no músculo cardíaco).
+> - **Depressão de ST (oldpeak)**<br>Variável derivada do eletrocardiograma (ECG) que indica isquemia miocárdica (falta de oxigenação no músculo cardíaco).
 > 
 
 **Relevância para IA** - Para um projeto de saúde, essas variáveis funcionam como "features" de alta correlação, permitindo que modelos de aprendizado de máquina aprendam a distinguir entre padrões de normalidade e estados patológicos com base em evidências fisiológicas concretas.
 
 
-## 2. Dados Textuais<br><sub>Processamento de Linguagem Natural (NLP)<sub>
+## 2. Dados textuais<br><sub>Processamento de linguagem natural (NLP)<sub>
 A análise de dados não estruturados permite que a IA compreenda a literatura médica, as normas de conduta e o contexto epidemiológico do sistema de saúde brasileiro.
 
-### Fontes Selecionadas
+### Fontes selecionadas
 
-#### Diretrizes Brasileiras de Insuficiência Cardíaca Crônica e Aguda (SBC)
+#### Diretriz brasileira de insuficiência cardíaca crônica e aguda (SBC)
 > - **Por que este texto?**<br>É o documento oficial da Sociedade Brasileira de Cardiologia que padroniza o diagnóstico e tratamento no país. Selecionamos este texto por ser a "fonte da verdade" (Ground Truth) para qualquer sistema de IA que pretenda operar legal e clinicamente no Brasil.
 >
 > - **Relevância**<br>É a referência máxima para médicos e hospitais do SUS e da rede privada. Ele define os critérios de classificação de risco que a IA deve emular.
 >
-> - **Dados Estatísticos**<br>Publicada nos Arquivos Brasileiros de Cardiologia (fator de impacto relevante na América Latina), esta diretriz possui milhares de citações e é o documento mais consultado por cardiologistas brasileiros para a tomada de decisão clínica.
+> - **Dados estatísticos**<br>Publicada nos Arquivos Brasileiros de Cardiologia (fator de impacto relevante na América Latina), esta diretriz possui milhares de citações e é o documento mais consultado por cardiologistas brasileiros para a tomada de decisão clínica.
 
 | Artefatos | |
 | --- | --- |
-| Título original | **Diretriz Brasileira de Insuficiência Cardíaca Crônica e Aguda** |
+| Título original | **Diretriz brasileira de insuficiência cardíaca crônica e aguda** |
 | Link original | [www.scielo.br/j/abc/a/XkVKFb4838qXrXSYbmCYM3K/?lang=pt](https://www.scielo.br/j/abc/a/XkVKFb4838qXrXSYbmCYM3K/?lang=pt) |
 | Link PDF externo | [www.scielo.br/j/abc/a/XkVKFb4838qXrXSYbmCYM3K/?format=pdf&lang=pt](https://www.scielo.br/j/abc/a/XkVKFb4838qXrXSYbmCYM3K/?format=pdf&lang=pt) |
 | Link PDF local | [documents/diretriz_brasileira_de_insuficiencia_cardiaca_cronica_e_aguda.pdf](documents/diretriz_brasileira_de_insuficiencia_cardiaca_cronica_e_aguda.pdf) |
 | Link PDF Google Drive | [drive.google.com/file/d/1BLCramS381LNTNc4icAeZLggScii_C5_/view?usp=sharing](https://drive.google.com/file/d/1BLCramS381LNTNc4icAeZLggScii_C5_/view?usp=sharing) |
 
 
-#### Atualização de Tópicos Emergentes da Diretriz de Insuficiência Cardíaca (SBC)
+#### Atualização de tópicos emergentes da diretriz de insuficiência cardíaca (SBC)
 > - **Por que este texto?**<br>Selecionamos este documento pois ele complementa a diretriz principal com as evidências mais recentes (2021) sobre o manejo da doença no Brasil. Ele foca em novas terapias e perfis epidemiológicos recentes.
 >
 > - **Relevância**<br>É o documento que orienta a conduta médica atualizada nas unidades de saúde brasileiras. Ele contém a terminologia técnica mais moderna usada em prontuários e relatórios médicos.
 >
-> - **Dados Estatísticos**<br>Publicado pela Sociedade Brasileira de Cardiologia, este documento é a referência normativa para mais de 14.000 cardiologistas no país, sendo o pilar central para a atualização de protocolos de saúde.
+> - **Dados estatísticos**<br>Publicado pela Sociedade Brasileira de Cardiologia, este documento é a referência normativa para mais de 14.000 cardiologistas no país, sendo o pilar central para a atualização de protocolos de saúde.
 
 > ![Fluxograma de NLP](assets/fig2.png)
-> *<sup>Figura 2: Fluxograma de NLP – Do texto ao dado estruturado. Este diagrama ilustra como as diretrizes de saúde brasileiras (como a da SBC) são processadas por motores de NLP e LLMs, resultando em conhecimento estruturado (entidades, tópicos, sintomas) aplicável à fase de diagnóstico assistido por IA.</sup>*
+> *<sup>Figura 2 - Fluxograma de NLP – Do texto ao dado estruturado. Este diagrama ilustra como as diretrizes de saúde brasileiras (como a da SBC) são processadas por motores de NLP e LLMs, resultando em conhecimento estruturado (entidades, tópicos, sintomas) aplicável à fase de diagnóstico assistido por IA.</sup>*
 
 | Artefatos |  |
 | --- | --- |
-| Título original | **Atualização de Tópicos Emergentes da Diretriz de Insuficiência Cardíaca** |
+| Título original | **Atualização de tópicos emergentes da diretriz de insuficiência cardíaca** |
 | Link original | [abccardiol.org/article/atualizacao-de-topicos-emergentes-da-diretriz-brasileira-de-insuficiencia-cardiaca-2021/](https://abccardiol.org/article/atualizacao-de-topicos-emergentes-da-diretriz-brasileira-de-insuficiencia-cardiaca-2021/) |
 | Link PDF externo | [abccardiol.org/wp-content/uploads/articles_xml/0066-782X-abc-116-06-1174/0066-782X-abc-116-06-1174.x74770.pdf](https://abccardiol.org/wp-content/uploads/articles_xml/0066-782X-abc-116-06-1174/0066-782X-abc-116-06-1174.x74770.pdf) |
 | Link PDF local | [documents/atualizacao_de_topicos_emergentes-da_diretriz_brasileira_de_insuficiencia_cardiaca_2021.pdf](documents/atualizacao_de_topicos_emergentes-da_diretriz_brasileira_de_insuficiencia_cardiaca_2021.pdf) |
@@ -127,21 +127,21 @@ A análise de dados não estruturados permite que a IA compreenda a literatura m
 #### Exploração dos textos via algoritmos de NLP
 A aplicação de técnicas de Processamento de Linguagem Natural sobre estas fontes permite a conversão de conhecimento científico passivo em modelos de dados acionáveis. Através do uso de modelos de linguagem (LLMs) e bibliotecas especializadas, é possível extrair a semântica clínica e as regras de negócio da medicina cardiológica, garantindo que o sistema de IA opere de acordo com os protocolos vigentes e a realidade epidemiológica brasileira.
 
-> - **Extração de Entidades Nomeadas (NER)**<br>Algoritmos podem ser treinados para identificar automaticamente sintomas mencionados (ex: dispneia, ortopneia) e medicamentos citados, criando um dicionário de termos extraídos diretamente da literatura nacional.
+> - **Extração de entidades nomeadas (NER)**<br>Algoritmos podem ser treinados para identificar automaticamente sintomas mencionados (ex: dispneia, ortopneia) e medicamentos citados, criando um dicionário de termos extraídos diretamente da literatura nacional.
 >
-> - **Classificação de Tópicos (Topic Modeling)**<br>Permite organizar automaticamente grandes volumes de literatura, separando discussões sobre "Sintomas" de "Protocolos de Intervenção".
+> - **Classificação de tópicos (topic modeling)**<br>Permite organizar automaticamente grandes volumes de literatura, separando discussões sobre "Sintomas" de "Protocolos de Intervenção".
 >
-> - **Sumarização Automática**<br>Essencial para extrair pontos-chave de diretrizes extensas, entregando ao profissional apenas a conduta relevante para o perfil do paciente em análise.
+> - **Sumarização automática**<br>Essencial para extrair pontos-chave de diretrizes extensas, entregando ao profissional apenas a conduta relevante para o perfil do paciente em análise.
 >
 **Justificativa** - A análise textual humaniza o projeto de IA, garantindo que o sistema não apenas processe números, mas compreenda o conhecimento acumulado em décadas de literatura médica brasileira, auxiliando na medicina baseada em evidências.
 
-## 3. Dados Visuais<br><sub>Diagnóstico por Visão Computacional<sub>
+## 3. Dados visuais<br><sub>Diagnóstico por visão computacional<sub>
 Os dados visuais permitem que a IA identifique alterações físicas e estruturais que podem não ser captadas em exames laboratoriais puros.
 
-### Origem e Objetivos do Dataset
+### Origem e objetivos do dataset
 
 #### NIH ChestX-ray14
-> - **Histórico e Contexto**<br>
+> - **Histórico e contexto**<br>
 O NIH ChestX-ray14 é um conjunto de dados proveniente do National Institutes of Health (EUA), cujo objetivo é fornecer uma base massiva de radiografias de tórax rotuladas para o treinamento de diagnósticos assistidos por computador. Constitui um marco na Visão Computacional Médica, tendo substituído o antigo ChestX-ray8, expandindo a capacidade de detecção de 8 para 14 patologias diferentes através de mineração de texto em relatórios radiológicos.
 >
 > - **Origem**<br>
@@ -159,38 +159,38 @@ Domínio Público (CC0: Public Domain), permitindo uso irrestrito para pesquisa.
 | Link local | [dataset/nih_chest_x-ray/NIH_Xray_300](dataset/nih_chest_x-ray/NIH_Xray_300) |
 | Link Google Drive | [drive.google.com/drive/folders/1mY7Sdj7hZmnB7NJGLHKUG66va-Yap-E1?usp=sharing](https://drive.google.com/drive/folders/1mY7Sdj7hZmnB7NJGLHKUG66va-Yap-E1?usp=sharing) |
 
-#### Exploração via Visão Computacional
+#### Exploração via visão computacional
 > - **Detecção de Padrões e Anomalias**<br>Algoritmos podem ser treinados para identificar "infiltrados" ou "edemas" nos pulmões, sinais indiretos de falha cardíaca.
 >
-> - **Identificação de Bordas (Segmentação)**<br>Utilizada para isolar a silhueta do coração e calcular o Índice Cardiotorácico. Se o coração ocupa mais de 50% da largura do tórax, o sistema sinaliza Cardiomegalia.
+> - **Identificação de bordas (segmentação)**<br>Utilizada para isolar a silhueta do coração e calcular o Índice Cardiotorácico. Se o coração ocupa mais de 50% da largura do tórax, o sistema sinaliza Cardiomegalia.
 >
-> - **Reconhecimento de Dispositivos Implantados**<br>Identificação automática de marca-passos ou stents, fornecendo contexto vital sobre o histórico cirúrgico do paciente.
+> - **Reconhecimento de dispositivos implantados**<br>Identificação automática de marca-passos ou stents, fornecendo contexto vital sobre o histórico cirúrgico do paciente.
 >
 > - **Importância para IA**<br>A visão computacional atua como um multiplicador de eficiência, permitindo a triagem ultrarrápida de exames em unidades de emergência e reduzindo a variabilidade interpretativa entre diferentes examinadores.
 
 
-## 4. Estratégia de Curadoria
-Para este projeto, aplicamos uma técnica de Downsampling Estratificado, reduzindo cada dataset para um volume controlado de 300 registros. Esta decisão baseia-se em três pilares:
+## 4. Estratégia de curadoria
+Para este projeto, aplicamos uma técnica de downsampling estratificado, reduzindo cada dataset para um volume controlado de 300 registros. Esta decisão baseia-se em três pilares:
 >
-> - **Balanceamento de Classes**<br>Ao selecionar 150 casos positivos e 150 negativos, evitamos o "vício" (bias) do modelo, garantindo que a IA aprenda igualmente a detectar a saúde e a doença.
+> - **Balanceamento de classes**<br>Ao selecionar 150 casos positivos e 150 negativos, evitamos o "vício" (bias) do modelo, garantindo que a IA aprenda igualmente a detectar a saúde e a doença.
 >
-> - **Viabilidade Computacional**<br>O número 300 permite que o processamento (especialmente das imagens de 5GB) seja realizado em ambientes de estudo (como o Google Colab) sem estourar o limite de memória RAM e disco.
+> - **Viabilidade computacional**<br>O número 300 permite que o processamento (especialmente das imagens de 5GB) seja realizado em ambientes de estudo (como o Google Colab) sem estourar o limite de memória RAM e disco.
 >
-> - **Significância Estatística (Teorema do Limite Central)**<br>Em estatística, amostras acima de 30 ou 100 já costumam apresentar uma distribuição normal e tendências claras. Com 300 amostras, temos volume suficiente para demonstrar a eficácia da IA sem a redundância de milhares de dados idênticos.
+> - **Significância estatística (teorema do limite central)**<br>Em estatística, amostras acima de 30 ou 100 já costumam apresentar uma distribuição normal e tendências claras. Com 300 amostras, temos volume suficiente para demonstrar a eficácia da IA sem a redundância de milhares de dados idênticos.
 
 > ![Proveniência e curadoria de dados](assets/fig3.png)
-> *<sup>Figura 3: Infográfico de proveniência e curadoria de dados - Este funil visual ilustra o processo de curadoria. Ele demonstra como o volume de dados originais (numéricos e visuais) foi filtrado, validado e reduzido de forma estratificada para 300 amostras de alta fidelidade para este projeto.</sup>*
+> *<sup>Figura 3 - Infográfico de proveniência e curadoria de dados - Este funil visual ilustra o processo de curadoria. Ele demonstra como o volume de dados originais (numéricos e visuais) foi filtrado, validado e reduzido de forma estratificada para 300 amostras de alta fidelidade para este projeto.</sup>*
 
 ## 5. Citações e créditos originais
 Para fins acadêmicos e éticos, abaixo estão as referências diretas às fontes dos dados:
 
-| Dataset / Documento | Citação Original / Autor  | Fonte / Licença |
+| Dataset / documento | Citação original / autor  | Fonte / licença |
 | ---- | ---- | ---- |
-| Cardiovascular disease | Ulianova, S. (2019). Cardiovascular Disease Dataset. | [Kaggle Source](https://www.kaggle.com/datasets/sulianova/cardiovascular-disease-dataset) / CC BY 4.0 |
-| Heart failure prediction | Fedesoriano. (2021). Heart Failure Prediction Dataset. | [Kaggle Source](https://www.kaggle.com/datasets/fedesoriano/heart-failure-prediction) / ODC-By v1.0 |
-| NIH chestX-ray14 | Wang X, et al. (2017). ChestX-ray14 Hospital-scale Dataset. | [NIH Official Page](https://nihcc.app.box.com/v/ChestXray-NIHCC) / Domínio Público |
-| Diretriz Brasileira de Insuficiência Cardíaca Crônica e Aguda | Comitê da Diretriz de Insuficiência Cardíaca, SBC. | [Arq. Bras. Cardiol.](https://www.scielo.br/j/abc/a/XkVKFb4838qXrXSYbmCYM3K/?lang=pt) / Uso Acadêmico
-| Atualização de Tópicos Emergentes da Diretriz de Insuficiência Cardíaca - SBC | Marcondes-Braga, FG, et al. (2021). Atualização de Tópicos Emergentes. | [SBC / SciELO](https://abccardiol.org/article/atualizacao-de-topicos-emergentes-da-diretriz-brasileira-de-insuficiencia-cardiaca-2021/) / Uso Acadêmico
+| Cardiovascular disease | Ulianova, S. (2019). Cardiovascular disease dataset. | [Kaggle Source](https://www.kaggle.com/datasets/sulianova/cardiovascular-disease-dataset) / CC BY 4.0 |
+| Heart failure prediction | Fedesoriano. (2021). Heart failure prediction dataset. | [Kaggle Source](https://www.kaggle.com/datasets/fedesoriano/heart-failure-prediction) / ODC-By v1.0 |
+| NIH chestX-ray14 | Wang X, et al. (2017). ChestX-ray14 hospital-scale dataset. | [NIH Official Page](https://nihcc.app.box.com/v/ChestXray-NIHCC) / Domínio público |
+| Diretriz brasileira de insuficiência cardíaca crônica e aguda | Comitê da diretriz de insuficiência cardíaca, SBC. | [Arq. Bras. Cardiol.](https://www.scielo.br/j/abc/a/XkVKFb4838qXrXSYbmCYM3K/?lang=pt) / Uso acadêmico
+| Atualização de tópicos emergentes da diretriz de insuficiência cardíaca - SBC | Marcondes-Braga, FG, et al. (2021). Atualização de tópicos emergentes. | [SBC / SciELO](https://abccardiol.org/article/atualizacao-de-topicos-emergentes-da-diretriz-brasileira-de-insuficiencia-cardiaca-2021/) / Uso acadêmico
 
 
 ## 6. Considerações éticas, LGPD e conflitos de interesse
@@ -199,20 +199,20 @@ Como este projeto lida com dados de saúde, foram adotadas as seguintes diretriz
 > - **Conformidade com a LGPD (Lei 13.709/2018)**<br>
 Todos os dados numéricos e visuais utilizados nesta pesquisa são provenientes de repositórios públicos de acesso aberto, tendo passado por processos rigorosos de anonimização e descaracterização em suas fontes originais. Não há possibilidade de reidentificação dos indivíduos, garantindo o respeito à privacidade e ao tratamento de dados sensíveis conforme preconiza a legislação brasileira.
 >
-> - **Finalidade e Transparência**<br>
+> - **Finalidade e transparência**<br>
 Os dados selecionados destinam-se exclusivamente a fins de pesquisa acadêmica e desenvolvimento de protótipos de Inteligência Artificial, sem fins comerciais imediatos.
 >
-> - **Conflitos de Interesse**<br>
+> - **Conflitos de interesse**<br>
 O autor declara que não possui vínculos financeiros, comerciais ou institucionais com as plataformas de hospedagem de dados (Kaggle, Mendeley, NIH) ou com as farmacêuticas citadas nos textos de apoio, garantindo a neutralidade e a isenção científica do estudo.
 >
-> - **Vieses e Mitigação**<br>
+> - **Vieses e mitigação**<br>
 A técnica de downsampling estratificado foi aplicada não apenas por eficiência, mas como uma medida ética para mitigar o viés algorítmico, garantindo representatividade equitativa para pacientes saudáveis e portadores de patologias.
 
 
 ## Conclusão<br><sub>Qualidade, governança e aplicabilidade ao cenário brasileiro<sub>
 A fundamentação desta etapa demonstra que a eficácia da Inteligência Artificial não reside apenas no volume, mas na qualidade e procedência do dado. Ao selecionar datasets com índices de usabilidade máximos (10.0 no Kaggle) e reconhecidos globalmente (NIH, Mendeley), garantimos uma base de treinamento validada e livre de ruídos estatísticos.
 
-Embora os dados numéricos e visuais possuam origem internacional (EUA, Rússia e Europa), sua aplicabilidade ao cenário brasileiro é validada pela integração com os Dados Textuais selecionados. Ao cruzar as evidências globais com a Epidemiologia da Insuficiência Cardíaca no Brasil (SciELO) e as Diretrizes da Sociedade Brasileira de Cardiologia, criamos um modelo de "Localização de Dados". Isso garante que os padrões universais de patologia cardiovascular sejam interpretados sob a ótica das particularidades demográficas e dos protocolos de saúde pública do SUS.
+Embora os dados numéricos e visuais possuam origem internacional (EUA, Rússia e Europa), sua aplicabilidade ao cenário brasileiro é validada pela integração com os Dados Textuais selecionados. Ao cruzar as evidências globais com a Diretriz da Sociedade Brasileira de Cardiologia e a Atualização de tópicos emergentes da diretriz de insuficiência cardíaca, criamos um modelo de "Localização de Dados". Isso garante que os padrões universais de patologia cardiovascular sejam interpretados sob a ótica das particularidades demográficas e dos protocolos de saúde pública do SUS.
 
 A estratégia de downsampling estratificado para 300 amostras complementa essa visão, permitindo um equilíbrio metodológico entre as classes (doença vs. saúde). Com essa tríade de dados (numéricos, textuais e visuais) devidamente licenciados, estabelecemos um ecossistema de dados transparente, ético e — acima de tudo — clinicamente relevante para a realidade da cardiologia brasileira, pronto para sustentar as fases subsequentes de modelagem e arquitetura preditiva.
 
