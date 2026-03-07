@@ -31,8 +31,16 @@
 Este repositório documenta a etapa de curadoria e investigação de dados para um projeto de Inteligência Artificial aplicado à Cardiologia. O foco desta fase é buscar, identificar e coletar conjuntos de dados cardiológicos, compreender a sua procedência, avaliar a sua integridade, relevância clínica e como diferentes modalidades (numérica, textual e visual) podem ser exploradas por algoritmos de IA.
 
 
-![asd asd asd a](assets/fig1.png)
-*<center><sub>Cenários de uso da solução</sub></center>*
+
+<figure>
+  <img src="assets/fig1.png" alt="Description of the image">
+  <figcaption><i>Figura 1: Diagrama de Tríade de Conhecimento Cardíaco. Esta sobreposição de Venn ilustra como os dados Numéricos, Textuais e Visuais se complementam para criar um entendimento holístico da saúde do paciente, justificando o uso de múltiplas modalidades na fase de busca de dados.</i></figcaption>
+</figure>
+
+> ![Cenários de uso da solução](assets/fig1.png)
+> *<sup>Figura 1: Diagrama de Tríade de Conhecimento Cardíaco. Esta sobreposição de Venn ilustra como os dados Numéricos, Textuais e Visuais se complementam para criar um entendimento holístico da saúde do paciente, justificando o uso de múltiplas modalidades na fase de busca de dados.</sup>*
+
+
 
 ## 1. Dados numéricos<br><sub>O contexto metabólico e funcional<sub>
 Para esta categoria, foram selecionados datasets que representam os sinais vitais e os biomarcadores fundamentais para a saúde cardiovascular.
