@@ -127,34 +127,41 @@ Domínio Público (CC0: Public Domain), permitindo uso irrestrito para pesquisa.
 
 #### Exploração via Visão Computacional
 
-Detecção de Padrões e Anomalias: Algoritmos podem ser treinados para identificar "infiltrados" ou "edemas" nos pulmões, sinais indiretos de falha cardíaca.
-
-Identificação de Bordas (Segmentação): Utilizada para isolar a silhueta do coração e calcular o Índice Cardiotorácico. Se o coração ocupa mais de 50% da largura do tórax, o sistema sinaliza Cardiomegalia.
-
-Reconhecimento de Dispositivos Implantados: Identificação automática de marca-passos ou stents, fornecendo contexto vital sobre o histórico cirúrgico do paciente.
-
-Importância para IA: A visão computacional atua como um multiplicador de eficiência, permitindo a triagem ultrarrápida de exames em unidades de emergência e reduzindo a variabilidade interpretativa entre diferentes examinadores.
-
-
+> - **Detecção de Padrões e Anomalias**<br>Algoritmos podem ser treinados para identificar "infiltrados" ou "edemas" nos pulmões, sinais indiretos de falha cardíaca.
+>
+> - **Identificação de Bordas (Segmentação)**<br>Utilizada para isolar a silhueta do coração e calcular o Índice Cardiotorácico. Se o coração ocupa mais de 50% da largura do tórax, o sistema sinaliza Cardiomegalia.
+>
+> - **Reconhecimento de Dispositivos Implantados**<br>Identificação automática de marca-passos ou stents, fornecendo contexto vital sobre o histórico cirúrgico do paciente.
+>
+> - **Importância para IA**<br>A visão computacional atua como um multiplicador de eficiência, permitindo a triagem ultrarrápida de exames em unidades de emergência e reduzindo a variabilidade interpretativa entre diferentes examinadores.
 
 ## 4. Estratégia de Curadoria
+
 Para este projeto, aplicamos uma técnica de Downsampling Estratificado, reduzindo cada dataset para um volume controlado de 300 registros. Esta decisão baseia-se em três pilares:
-
-Balanceamento de Classes: Ao selecionar 150 casos positivos e 150 negativos, evitamos o "vício" (bias) do modelo, garantindo que a IA aprenda igualmente a detectar a saúde e a doença.
-
-Viabilidade Computacional: O número 300 permite que o processamento (especialmente das imagens de 5GB) seja realizado em ambientes de estudo (como o Google Colab) sem estourar o limite de memória RAM e disco.
-
-Significância Estatística (Teorema do Limite Central): Em estatística, amostras acima de 30 ou 100 já costumam apresentar uma distribuição normal e tendências claras. Com 300 amostras, temos volume suficiente para demonstrar a eficácia da IA sem a redundância de milhares de dados idênticos.
+>
+> - **Balanceamento de Classes**<br>Ao selecionar 150 casos positivos e 150 negativos, evitamos o "vício" (bias) do modelo, garantindo que a IA aprenda igualmente a detectar a saúde e a doença.
+>
+> - **Viabilidade Computacional**<br>O número 300 permite que o processamento (especialmente das imagens de 5GB) seja realizado em ambientes de estudo (como o Google Colab) sem estourar o limite de memória RAM e disco.
+>
+> - **Significância Estatística (Teorema do Limite Central)**<br>Em estatística, amostras acima de 30 ou 100 já costumam apresentar uma distribuição normal e tendências claras. Com 300 amostras, temos volume suficiente para demonstrar a eficácia da IA sem a redundância de milhares de dados idênticos.
 
 ## 5. Citações e Créditos Originais
 Para fins acadêmicos e éticos, abaixo estão as referências diretas às fontes dos dados:
 
 
-| Dataset | Citação Original / Autor  | Link de Referência |
+| Dataset / Documento | Citação Original / Autor  | Fonte / Licença |
 | ---- | ---- | ---- |
-| Cardiovascular Disease | Ulianova, S. (2019). Cardiovascular Disease Dataset. | [Kaggle Source](https://www.kaggle.com/datasets/sulianova/cardiovascular-disease-dataset) |
-| Heart Failure Prediction | Fedesoriano. (2021). Heart Failure Prediction Dataset. | [Kaggle Source](https://www.kaggle.com/datasets/fedesoriano/heart-failure-prediction) |
-| NIH ChestX-ray14 | Wang X, et al. (2017). ChestX-ray14 Hospital-scale Dataset. | [NIH Official Page](https://nihcc.app.box.com/v/ChestXray-NIHCC) |
+| Cardiovascular Disease | Ulianova, S. (2019). Cardiovascular Disease Dataset. | [Kaggle Source](https://www.kaggle.com/datasets/sulianova/cardiovascular-disease-dataset) / CC BY 4.0 |
+| Heart Failure Prediction | Fedesoriano. (2021). Heart Failure Prediction Dataset. | [Kaggle Source](https://www.kaggle.com/datasets/fedesoriano/heart-failure-prediction) / ODC-By v1.0 |
+| NIH ChestX-ray14 | Wang X, et al. (2017). ChestX-ray14 Hospital-scale Dataset. | [NIH Official Page](https://nihcc.app.box.com/v/ChestXray-NIHCC) / Domínio Público |
+| Diretriz Brasileira de Insuficiência Cardíaca Crônica e Aguda | Comitê da Diretriz de Insuficiência Cardíaca, SBC. | [Arq. Bras. Cardiol.](https://www.scielo.br/j/abc/a/XkVKFb4838qXrXSYbmCYM3K/?lang=pt) / Uso Acadêmico
+| Atualização de Tópicos Emergentes da Diretriz de Insuficiência Cardíaca - SBC | Marcondes-Braga, FG, et al. (2021). Atualização de Tópicos Emergentes. | [SBC / SciELO](https://abccardiol.org/article/atualizacao-de-topicos-emergentes-da-diretriz-brasileira-de-insuficiencia-cardiaca-2021/) / Uso Acadêmico
+
+
+
+
+
+
 
 
 ## 6. Considerações éticas, LGPD e conflitos de interesse
