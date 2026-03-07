@@ -30,17 +30,8 @@
 ## Visão geral
 Este repositório documenta a etapa de curadoria e investigação de dados para um projeto de Inteligência Artificial aplicado à Cardiologia. O foco desta fase é buscar, identificar e coletar conjuntos de dados cardiológicos, compreender a sua procedência, avaliar a sua integridade, relevância clínica e como diferentes modalidades (numérica, textual e visual) podem ser exploradas por algoritmos de IA.
 
-
-
-<figure>
-  <img src="assets/fig1.png" alt="Description of the image">
-  <figcaption><i>Figura 1: Diagrama de Tríade de Conhecimento Cardíaco. Esta sobreposição de Venn ilustra como os dados Numéricos, Textuais e Visuais se complementam para criar um entendimento holístico da saúde do paciente, justificando o uso de múltiplas modalidades na fase de busca de dados.</i></figcaption>
-</figure>
-
-> ![Cenários de uso da solução](assets/fig1.png)
-> *<sup>Figura 1: Diagrama de Tríade de Conhecimento Cardíaco. Esta sobreposição de Venn ilustra como os dados Numéricos, Textuais e Visuais se complementam para criar um entendimento holístico da saúde do paciente, justificando o uso de múltiplas modalidades na fase de busca de dados.</sup>*
-
-
+> ![Diagrama de tríade de conhecimento cardíaco](assets/fig1.png)
+> *<sup>Figura 1: Diagrama de tríade de conhecimento cardíaco - Esta sobreposição de Venn ilustra como os dados numéricos, textuais e visuais se complementam para criar um entendimento holístico da saúde do paciente, justificando o uso de múltiplas modalidades na fase de busca de dados.</sup>*
 
 ## 1. Dados numéricos<br><sub>O contexto metabólico e funcional<sub>
 Para esta categoria, foram selecionados datasets que representam os sinais vitais e os biomarcadores fundamentais para a saúde cardiovascular.
@@ -114,14 +105,15 @@ A análise de dados não estruturados permite que a IA compreenda a literatura m
 | Link PDF Google Drive | [drive.google.com/file/d/1BLCramS381LNTNc4icAeZLggScii_C5_/view?usp=sharing](https://drive.google.com/file/d/1BLCramS381LNTNc4icAeZLggScii_C5_/view?usp=sharing) |
 
 
-
-
 #### Atualização de Tópicos Emergentes da Diretriz de Insuficiência Cardíaca (SBC)
 > - **Por que este texto?**<br>Selecionamos este documento pois ele complementa a diretriz principal com as evidências mais recentes (2021) sobre o manejo da doença no Brasil. Ele foca em novas terapias e perfis epidemiológicos recentes.
 >
 > - **Relevância**<br>É o documento que orienta a conduta médica atualizada nas unidades de saúde brasileiras. Ele contém a terminologia técnica mais moderna usada em prontuários e relatórios médicos.
 >
 > - **Dados Estatísticos**<br>Publicado pela Sociedade Brasileira de Cardiologia, este documento é a referência normativa para mais de 14.000 cardiologistas no país, sendo o pilar central para a atualização de protocolos de saúde.
+
+> ![Fluxograma de NLP](assets/fig2.png)
+> *<sup>Figura 2: Fluxograma de NLP – Do texto ao dado estruturado. Este diagrama ilustra como as diretrizes de saúde brasileiras (como a da SBC) são processadas por motores de NLP e LLMs, resultando em conhecimento estruturado (entidades, tópicos, sintomas) aplicável à fase de diagnóstico assistido por IA.</sup>*
 
 | Artefatos |  |
 | --- | --- |
@@ -186,8 +178,10 @@ Para este projeto, aplicamos uma técnica de Downsampling Estratificado, reduzin
 >
 > - **Significância Estatística (Teorema do Limite Central)**<br>Em estatística, amostras acima de 30 ou 100 já costumam apresentar uma distribuição normal e tendências claras. Com 300 amostras, temos volume suficiente para demonstrar a eficácia da IA sem a redundância de milhares de dados idênticos.
 
+> ![Proveniência e curadoria de dados](assets/fig3.png)
+> *<sup>Figura 3: Infográfico de proveniência e curadoria de dados - Este funil visual ilustra o processo de curadoria. Ele demonstra como o volume de dados originais (numéricos e visuais) foi filtrado, validado e reduzido de forma estratificada para 300 amostras de alta fidelidade para este projeto.</sup>*
 
-## 5. Citações e Créditos Originais
+## 5. Citações e créditos originais
 Para fins acadêmicos e éticos, abaixo estão as referências diretas às fontes dos dados:
 
 | Dataset / Documento | Citação Original / Autor  | Fonte / Licença |
