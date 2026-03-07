@@ -32,7 +32,7 @@ Este repositório documenta a etapa de curadoria e investigação de dados para 
 
 
 ![asd asd asd a](assets/fig1.png)
-
+*<center><sub>Cenários de uso da solução</sub></center>*
 
 ## 1. Dados numéricos<br><sub>O contexto metabólico e funcional<sub>
 Para esta categoria, foram selecionados datasets que representam os sinais vitais e os biomarcadores fundamentais para a saúde cardiovascular.
