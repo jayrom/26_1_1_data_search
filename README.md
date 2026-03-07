@@ -5,13 +5,11 @@
         <img src="assets/logo-fiap.png" alt="FIAP - Faculdade de Informática e Admnistração Paulista" border="0" width=30%>
     </a>
 </p>
-
 <br>
 
 # A Busca de Dados<br><sub>Preparando o Terreno para a Inteligência Cardiológica<sub>
 
 ## Grupo TiãoTech
-
 <p style="padding-top: 10px;">
     <img src="assets/tiaotech-logo.png" alt="Grupo TiãoTech" border="0" width=10%>
 </p>
@@ -36,11 +34,9 @@ Este repositório documenta a etapa de curadoria e investigação de dados para 
 Para esta categoria, foram selecionados datasets que representam os sinais vitais e os biomarcadores fundamentais para a saúde cardiovascular.
 
 ### Origem e Objetivos dos Datasets
-
 Nesta seção, exploramos a procedência e o impacto dos dados que fundamentam as análises quantitativas.
 
 #### Cardiovascular Disease Dataset
-
 > - **Histórico e Contexto**<br>Este dataset é um clássico da área de saúde, frequentemente utilizado para benchmarking de algoritmos de classificação. Ele foca em exames de rotina para identificar a presença de doenças cardiovasculares em uma fase assintomática.
 >
 > - **Origem**<br>Dados coletados na Rússia (Mendeley Data / Svetlana Ulianova), com registros consolidados por volta de 2019.
@@ -49,8 +45,13 @@ Nesta seção, exploramos a procedência e o impacto dos dados que fundamentam a
 >
 > - **Licença**<br>Attribution 4.0 International (CC BY 4.0).
 
-#### Heart Failure Prediction Dataset
+| Artefatos | |
+| --- | --- |
+| Link dataset original | [www.kaggle.com/datasets/sulianova/cardiovascular-disease-dataset](https://www.kaggle.com/datasets/sulianova/cardiovascular-disease-dataset) |
+| Link local | [dataset/cardiovascular_disease](dataset/cardiovascular_disease) |
+| Link Google Drive | [drive.google.com/drive/folders/11T3nwl_bOY6uIM-yBvVKdBCK5ulLAjGE?usp=sharing](https://drive.google.com/drive/folders/11T3nwl_bOY6uIM-yBvVKdBCK5ulLAjGE?usp=sharing) |
 
+#### Heart Failure Prediction Dataset
 > - **Histórico e Contexto**<br>Trata-se de um dataset "sintético" resultante da combinação de 5 bases de dados hospitalares independentes (Cleveland, Hungria, Suíça, Long Beach e Stalog). É o dataset mais abrangente disponível publicamente para prever falhas cardíacas com base em sintomas clínicos.
 >
 > - **Origem**<br>Consolidado em 2021 (Multinacional: EUA, Hungria e Suíça).
@@ -60,7 +61,6 @@ Nesta seção, exploramos a procedência e o impacto dos dados que fundamentam a
 > - **Licença**<br>Open Data Commons Attribution License (ODC-By) v1.0.
 
 #### Variáveis relevantes e justificativa clínica
-
 > - **Pressão Arterial Sistólica/Diastólica**<br>Essencial para identificar a hipertensão, o principal preditor de danos vasculares e eventos agudos.<br>
 >
 > - **Colesterol**<br>Variável crítica para avaliar o risco de aterosclerose e obstrução arterial a longo prazo.
@@ -72,14 +72,19 @@ Nesta seção, exploramos a procedência e o impacto dos dados que fundamentam a
 
 **Relevância para IA** - Para um projeto de saúde, essas variáveis funcionam como "features" de alta correlação, permitindo que modelos de aprendizado de máquina aprendam a distinguir entre padrões de normalidade e estados patológicos com base em evidências fisiológicas concretas.
 
-## 2. Dados Textuais<br><sub>Processamento de Linguagem Natural (NLP)<sub>
+| Artefatos | |
+| --- | --- |
+| Link dataset original | [https://www.kaggle.com/datasets/fedesoriano/heart-failure-prediction/data](https://www.kaggle.com/datasets/fedesoriano/heart-failure-prediction/data) |
+| Link local |  [dataset/heart_failure](dataset/heart_failure)
+| Link Google Drive | [drive.google.com/drive/folders/1alQ0DYefEby8D6VibpsmCXtH70PNYnh_?usp=sharing](https://drive.google.com/drive/folders/1alQ0DYefEby8D6VibpsmCXtH70PNYnh_?usp=sharing) |
 
+
+## 2. Dados Textuais<br><sub>Processamento de Linguagem Natural (NLP)<sub>
 A análise de dados não estruturados permite que a IA compreenda a literatura médica, as normas de conduta e o contexto epidemiológico do sistema de saúde brasileiro.
 
 ### Fontes Selecionadas
 
 #### Diretrizes Brasileiras de Insuficiência Cardíaca Crônica e Aguda (SBC)
-
 > - **Por que este texto?**<br>É o documento oficial da Sociedade Brasileira de Cardiologia que padroniza o diagnóstico e tratamento no país. Selecionamos este texto por ser a "fonte da verdade" (Ground Truth) para qualquer sistema de IA que pretenda operar legal e clinicamente no Brasil.
 >
 > - **Relevância**<br>É a referência máxima para médicos e hospitais do SUS e da rede privada. Ele define os critérios de classificação de risco que a IA deve emular.
@@ -87,15 +92,13 @@ A análise de dados não estruturados permite que a IA compreenda a literatura m
 > - **Dados Estatísticos**<br>Publicada nos Arquivos Brasileiros de Cardiologia (fator de impacto relevante na América Latina), esta diretriz possui milhares de citações e é o documento mais consultado por cardiologistas brasileiros para a tomada de decisão clínica.
 
 #### Atualização de Tópicos Emergentes da Diretriz de Insuficiência Cardíaca (SBC)
-
 > - **Por que este texto?**<br>Selecionamos este documento pois ele complementa a diretriz principal com as evidências mais recentes (2021) sobre o manejo da doença no Brasil. Ele foca em novas terapias e perfis epidemiológicos recentes.
-
+>
 > - **Relevância**<br>É o documento que orienta a conduta médica atualizada nas unidades de saúde brasileiras. Ele contém a terminologia técnica mais moderna usada em prontuários e relatórios médicos.
-
+>
 > - **Dados Estatísticos**<br>Publicado pela Sociedade Brasileira de Cardiologia, este documento é a referência normativa para mais de 14.000 cardiologistas no país, sendo o pilar central para a atualização de protocolos de saúde.
 
 #### Exploração dos textos via algoritmos de NLP
-
 A aplicação de técnicas de Processamento de Linguagem Natural sobre estas fontes permite a conversão de conhecimento científico passivo em modelos de dados acionáveis. Através do uso de modelos de linguagem (LLMs) e bibliotecas especializadas, é possível extrair a semântica clínica e as regras de negócio da medicina cardiológica, garantindo que o sistema de IA opere de acordo com os protocolos vigentes e a realidade epidemiológica brasileira.
 
 > - **Extração de Entidades Nomeadas (NER)**<br>Algoritmos podem ser treinados para identificar automaticamente sintomas mencionados (ex: dispneia, ortopneia) e medicamentos citados, criando um dicionário de termos extraídos diretamente da literatura nacional.
@@ -112,7 +115,6 @@ Os dados visuais permitem que a IA identifique alterações físicas e estrutura
 ### Origem e Objetivos do Dataset
 
 #### NIH ChestX-ray14
-
 > - **Histórico e Contexto**<br>
 O NIH ChestX-ray14 é um conjunto de dados proveniente do National Institutes of Health (EUA), cujo objetivo é fornecer uma base massiva de radiografias de tórax rotuladas para o treinamento de diagnósticos assistidos por computador. Constitui um marco na Visão Computacional Médica, tendo substituído o antigo ChestX-ray8, expandindo a capacidade de detecção de 8 para 14 patologias diferentes através de mineração de texto em relatórios radiológicos.
 >
@@ -126,7 +128,6 @@ Estados Unidos (NIH Clinical Center), publicado originalmente em 2017.
 Domínio Público (CC0: Public Domain), permitindo uso irrestrito para pesquisa.
 
 #### Exploração via Visão Computacional
-
 > - **Detecção de Padrões e Anomalias**<br>Algoritmos podem ser treinados para identificar "infiltrados" ou "edemas" nos pulmões, sinais indiretos de falha cardíaca.
 >
 > - **Identificação de Bordas (Segmentação)**<br>Utilizada para isolar a silhueta do coração e calcular o Índice Cardiotorácico. Se o coração ocupa mais de 50% da largura do tórax, o sistema sinaliza Cardiomegalia.
@@ -135,8 +136,14 @@ Domínio Público (CC0: Public Domain), permitindo uso irrestrito para pesquisa.
 >
 > - **Importância para IA**<br>A visão computacional atua como um multiplicador de eficiência, permitindo a triagem ultrarrápida de exames em unidades de emergência e reduzindo a variabilidade interpretativa entre diferentes examinadores.
 
-## 4. Estratégia de Curadoria
+| Artefatos | |
+| --- | --- |
+| Link dataset original | [www.kaggle.com/datasets/nih-chest-xrays/data](https://www.kaggle.com/datasets/nih-chest-xrays/data) |
+| Link local | [dataset/nih_chest_x-ray/NIH_Xray_300](dataset/nih_chest_x-ray/NIH_Xray_300) |
+| Link Google Drive | [drive.google.com/drive/folders/1mY7Sdj7hZmnB7NJGLHKUG66va-Yap-E1?usp=sharing](https://drive.google.com/drive/folders/1mY7Sdj7hZmnB7NJGLHKUG66va-Yap-E1?usp=sharing) |
 
+
+## 4. Estratégia de Curadoria
 Para este projeto, aplicamos uma técnica de Downsampling Estratificado, reduzindo cada dataset para um volume controlado de 300 registros. Esta decisão baseia-se em três pilares:
 >
 > - **Balanceamento de Classes**<br>Ao selecionar 150 casos positivos e 150 negativos, evitamos o "vício" (bias) do modelo, garantindo que a IA aprenda igualmente a detectar a saúde e a doença.
@@ -145,27 +152,20 @@ Para este projeto, aplicamos uma técnica de Downsampling Estratificado, reduzin
 >
 > - **Significância Estatística (Teorema do Limite Central)**<br>Em estatística, amostras acima de 30 ou 100 já costumam apresentar uma distribuição normal e tendências claras. Com 300 amostras, temos volume suficiente para demonstrar a eficácia da IA sem a redundância de milhares de dados idênticos.
 
+
 ## 5. Citações e Créditos Originais
 Para fins acadêmicos e éticos, abaixo estão as referências diretas às fontes dos dados:
 
-
 | Dataset / Documento | Citação Original / Autor  | Fonte / Licença |
 | ---- | ---- | ---- |
-| Cardiovascular Disease | Ulianova, S. (2019). Cardiovascular Disease Dataset. | [Kaggle Source](https://www.kaggle.com/datasets/sulianova/cardiovascular-disease-dataset) / CC BY 4.0 |
-| Heart Failure Prediction | Fedesoriano. (2021). Heart Failure Prediction Dataset. | [Kaggle Source](https://www.kaggle.com/datasets/fedesoriano/heart-failure-prediction) / ODC-By v1.0 |
-| NIH ChestX-ray14 | Wang X, et al. (2017). ChestX-ray14 Hospital-scale Dataset. | [NIH Official Page](https://nihcc.app.box.com/v/ChestXray-NIHCC) / Domínio Público |
+| Cardiovascular disease | Ulianova, S. (2019). Cardiovascular Disease Dataset. | [Kaggle Source](https://www.kaggle.com/datasets/sulianova/cardiovascular-disease-dataset) / CC BY 4.0 |
+| Heart failure prediction | Fedesoriano. (2021). Heart Failure Prediction Dataset. | [Kaggle Source](https://www.kaggle.com/datasets/fedesoriano/heart-failure-prediction) / ODC-By v1.0 |
+| NIH chestX-ray14 | Wang X, et al. (2017). ChestX-ray14 Hospital-scale Dataset. | [NIH Official Page](https://nihcc.app.box.com/v/ChestXray-NIHCC) / Domínio Público |
 | Diretriz Brasileira de Insuficiência Cardíaca Crônica e Aguda | Comitê da Diretriz de Insuficiência Cardíaca, SBC. | [Arq. Bras. Cardiol.](https://www.scielo.br/j/abc/a/XkVKFb4838qXrXSYbmCYM3K/?lang=pt) / Uso Acadêmico
 | Atualização de Tópicos Emergentes da Diretriz de Insuficiência Cardíaca - SBC | Marcondes-Braga, FG, et al. (2021). Atualização de Tópicos Emergentes. | [SBC / SciELO](https://abccardiol.org/article/atualizacao-de-topicos-emergentes-da-diretriz-brasileira-de-insuficiencia-cardiaca-2021/) / Uso Acadêmico
 
 
-
-
-
-
-
-
 ## 6. Considerações éticas, LGPD e conflitos de interesse
-
 Como este projeto lida com dados de saúde, foram adotadas as seguintes diretrizes éticas e legais:
 
 > - **Conformidade com a LGPD (Lei 13.709/2018)**<br>
@@ -180,8 +180,8 @@ O autor declara que não possui vínculos financeiros, comerciais ou institucion
 > - **Vieses e Mitigação**<br>
 A técnica de downsampling estratificado foi aplicada não apenas por eficiência, mas como uma medida ética para mitigar o viés algorítmico, garantindo representatividade equitativa para pacientes saudáveis e portadores de patologias.
 
-## Conclusão<br><sub>Qualidade, governança e aplicabilidade ao cenário brasileiro<sub>
 
+## Conclusão<br><sub>Qualidade, governança e aplicabilidade ao cenário brasileiro<sub>
 A fundamentação desta etapa demonstra que a eficácia da Inteligência Artificial não reside apenas no volume, mas na qualidade e procedência do dado. Ao selecionar datasets com índices de usabilidade máximos (10.0 no Kaggle) e reconhecidos globalmente (NIH, Mendeley), garantimos uma base de treinamento validada e livre de ruídos estatísticos.
 
 Embora os dados numéricos e visuais possuam origem internacional (EUA, Rússia e Europa), sua aplicabilidade ao cenário brasileiro é validada pela integração com os Dados Textuais selecionados. Ao cruzar as evidências globais com a Epidemiologia da Insuficiência Cardíaca no Brasil (SciELO) e as Diretrizes da Sociedade Brasileira de Cardiologia, criamos um modelo de "Localização de Dados". Isso garante que os padrões universais de patologia cardiovascular sejam interpretados sob a ótica das particularidades demográficas e dos protocolos de saúde pública do SUS.
@@ -195,22 +195,15 @@ A estratégia de downsampling estratificado para 300 amostras complementa essa v
 Dentre os arquivos e pastas presentes na raiz do projeto, definem-se:
 
 - **.github** - Arquivos de configuração específicos do GitHub.
-
 - **assets** - Imagens.
-
 - **dataset** - Arquivos de dados selecionados para esta entrega.
-
 - **documents** - Artigos selecionados para esta entrega.
-
 - **src** - Arquivos de código fonte utilizados.
-
 - **README.md** - Este documento.
 
 *Foram removidas as pastas default vazias.*
 
-
-
-### 📋 Licença
+### Licença
 
 <img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/cc.svg?ref=chooser-v1"><img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/by.svg?ref=chooser-v1"><p xmlns:cc="http://creativecommons.org/ns#" xmlns:dct="http://purl.org/dc/terms/"><a property="dct:title" rel="cc:attributionURL" href="https://github.com/agodoi/template">MODELO GIT FIAP</a> por <a rel="cc:attributionURL dct:creator" property="cc:attributionName" href="https://fiap.com.br">Fiap</a> está licenciado sobre <a href="http://creativecommons.org/licenses/by/4.0/?ref=chooser-v1" target="_blank" rel="license noopener noreferrer" style="display:inline-block;">Attribution 4.0 International</a>.</p>
 
